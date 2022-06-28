@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>SignalLight</title>
+</head>
+
+<body>
+    <section class="sec">
+        <header>
+            <a href="#"><img src="./img/logo.png" class="logo"></a>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Green</a></li>
+                <li><a href="#">Yellow</a></li>
+                <li><a href="#">Red</a></li>
+            </ul>
+        </header>
+        <div class="content">
+            <div class="textBox">
+                <h2>Signal Light<br><span>color</span></h2>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur,
+                    adipisicing elit. Dolor quia quo accusantium in molestias
+                    impedit autem soluta culpa vitae magnam consectetur quod,
+                    error cumque facere, architecto, neque quasi similique veritatis.
+                </p>
+                <a href="#">Signal Light</a>
+            </div>
+            <div class="imgBox">
+                <img src="./img/signal.png" class="signal">
+            </div>
+        </div>
+        <ul class="floor">
+            <li><img src="./img/red.png" onclick="imgSlider('./img/red.png');changeBgColor('#6ED746')"></li>
+            <li><img src="./img/yellow.png" onclick="imgSlider('./img/yellow.png');changeBgColor('#FF5A5A')"></li>
+            <li><img src="./img/green.png" onclick="imgSlider('./img/green.png');changeBgColor('#FFF56E')"></li>
+        </ul>
+        <ul class="sns">
+            <li><a href="#"><img src="./img/facebook.png"></a></li>
+            <li><a href="#"><img src="./img/twitter.png"></a></li>
+            <li><a href="#"><img src="./img/instagram.png"></a></li>
+        </ul>
+    </section>
+    <script type="text/javascript">
+        function imgSlider(anything) {
+            document.querySelector('.signal').src = anything;
+        }
+        function changeBgColor(color) {
+            const sec = document.querySelector('.sec');
+            sec.style.background = color;
+        }
+    </script>
+</body>
+
+</html>
